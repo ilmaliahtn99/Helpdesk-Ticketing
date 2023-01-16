@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="Dashboard">
+  <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+  <title>Helpdesk Ticketing Sistem</title>
+
+  <!-- Favicons -->
+  <link href="img/logo_wika.png" rel="icon">
+  <link href="img/logo_wika.png" rel="logo_wika">
+
+  <!-- Bootstrap core CSS -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!--external css-->
+  <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap-fileupload/bootstrap-fileupload.css" />
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap-datepicker/css/datepicker.css" />
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap-daterangepicker/daterangepicker.css" />
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap-timepicker/compiled/timepicker.css" />
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap-datetimepicker/datertimepicker.css" />
+  <link rel="stylesheet" type="text/css" href="lib/gritter/css/jquery.gritter.css" />
+  <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+ 
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-responsive.css" rel="stylesheet">
+  <script src="lib/chart-master/Chart.js"></script>
+  <script type="text/javascript" src="assets/js/Chart.js"></script>
+
+</head>
+
+<body>
+  <section id="container">
+    <!-- ********************************************************************************************************************************************************** TOP BAR CONTENT & NOTIFICATIONS *********************************************************************************************************************************************************** -->
+    <!--header start-->
+    <header class="header black-bg" style="background-color: #014495">
+      
+      <!--logo start-->
+      <a href="index.html" class="logo"><img src="img/logo_wika.png" style="width: 60px; margin-right: 12px;"><b>Helpdesk</b></a>
+      <!--logo end-->
+      <div class="sidebar-toggle-box" style="margin-left: 30px">
+        <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+      </div>
+     <form class="" action="#" style="margin-top: 13px; border-radius: 5px;">
+     <input type="text" placeholder="Search Ticket" name="search" style="width: 220px; height: 35px; border-radius: 5px; border-color: #000;"> <button type="submit" style="width: 40px; height: 35px; border-radius: 5px;"><i class="fa fa-search"></i></button>
+      
+      <div class="top-menu" >
+        <ul class="nav pull-right top-menu" style="margin-top: -50px;">
+          <li><a class="logout" href="login.html">Logout</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav notify-row" id="top_menu" style="margin-left: 800px;"> 
+        
+        <!--  notification start -->
+        <ul class="nav top-menu" style="margin-bottom: 20px; float: right; margin-top: -50px;">
+          <!-- settings start -->
+          <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+              <i class="fa fa-tasks"></i>
+              <span class="badge bg-theme">4</span>
+              </a>
+            <ul class="dropdown-menu extended tasks-bar">
+              <div class="notify-arrow notify-arrow-green"></div>
+              <li>
+                <p class="green">You have 4 pending tasks</p>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <div class="task-info">
+                    <div class="desc">Dashio Admin Panel</div>
+                    <div class="percent">40%</div>
+                  </div>
+                  <div class="progress progress-striped">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                      <span class="sr-only">40% Complete (success)</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <div class="task-info">
+                    <div class="desc">Database Update</div>
+                    <div class="percent">60%</div>
+                  </div>
+                  <div class="progress progress-striped">
+                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                      <span class="sr-only">60% Complete (warning)</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <div class="task-info">
+                    <div class="desc">Product Development</div>
+                    <div class="percent">80%</div>
+                  </div>
+                  <div class="progress progress-striped">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                      <span class="sr-only">80% Complete</span>
+                    </div>
+                  </div>
+              </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <div class="task-info">
+                    <div class="desc">Payments Sent</div>
+                    <div class="percent">70%</div>
+                  </div>
+                  <div class="progress progress-striped">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                      <span class="sr-only">70% Complete (Important)</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="external">
+                <a href="#">See All Tasks</a>
+              </li>
+            </ul>
+          </li>
+          <!-- settings end -->
+
+          <!-- notification dropdown start-->
+          <li id="header_notification_bar" class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+              <i class="fa fa-bell-o"></i>
+              <span class="badge bg-warning">7</span>
+              </a>
+            <ul class="dropdown-menu extended notification">
+              <div class="notify-arrow notify-arrow-yellow"></div>
+              <li>
+                <p class="yellow">You have 7 new notifications</p>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                  Server Overloaded.
+                  <span class="small italic">4 mins.</span>
+                  </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <span class="label label-warning"><i class="fa fa-bell"></i></span>
+                  Memory #2 Not Responding.
+                  <span class="small italic">30 mins.</span>
+                  </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                  Disk Space Reached 85%.
+                  <span class="small italic">2 hrs.</span>
+                  </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <span class="label label-success"><i class="fa fa-plus"></i></span>
+                  New User Registered.
+                  <span class="small italic">3 hrs.</span>
+                  </a>
+              </li>
+              <li>
+                <a href="index.html#">See all notifications</a>
+              </li>
+            </ul>
+          </li>
+          <!-- notification dropdown end -->
+        </ul>
+        <!--  notification end -->
+      </div>
+    </form>
+      
+    </header>
+    <!-- ********************************************************************************************************************************************************** MAIN SIDEBAR MENU *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+    <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu" id="nav-accordion">
+          <li class="mt">
+            <a class="active" href="index.php">
+              <i class="fa fa-dashboard"></i>
+              <span>Dashboard</span>
+              </a>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-desktop"></i>
+              <span>Task</span>
+              </a>
+            <ul class="sub">
+              <li><a href="task.html">Open</a></li>
+              <li><a href="completed.html">Completed</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+             <i class="fa fa-ticket"></i>
+
+              <span>Ticket</span>
+              </a>
+            <ul class="sub">
+              <li><a href="open_ticket.php">Open</a><span class="label label-theme pull-right mail-info">2</span></li>
+              <!-- <li><a href="myticket.html">My Tikets</a></li>
+              <li><a href="closed.html">Closed</a></li>
+              <li><a href="search.html">Search</a></li> -->
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-book"></i>
+              <span>Knowledgebase</span>
+              </a>
+            <ul class="sub">
+              <li><a href="module.html">FAQ</a></li>
+              <li><a href="canned_responses.html">Canned Responses</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-tasks"></i>
+              <span a href="report_ticket.html">Report</span>
+            </a>
+            <ul class="sub">
+              <li><a href="report_ticket.html">Laporan Data Ticket</a></li>
+            </ul>
+            <ul class="sub">
+              <li><a href="help_topic.html">Penanganan Insiden Dan Permintaan Layanan</a></li>
+            </ul>
+            <ul class="sub">
+              <li><a href="report_team.html">Performa Team</a></li>
+            </ul>
+          </li>
+      </div>
+    </aside>
+    <!--sidebar end-->
+    <!-- ********************************************************************************************************************************************************** MAIN CONTENT *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+      <section class="wrapper">
+        <div class="row">
+          <div class="col-lg-12 main-chart">
+     
+            <div class="row mt" style="margin-top: -10px;">
+              <div class="col-sm-3 col-sm-4 mb" style="border-radius: 20px;">
+                <!-- overdue -->
+                <div class="card-block" style="background-color: #87CEEB; border-radius: 7px;">
+                  <div class="grey-header" style="border-radius: 7px;">
+                    <h5 style="text-align: center; padding-top: 10px; color: #000;">Overdue</h5>
+                  </div>
+                  <div class="chart mt">
+                    <div class="sparkline" data-type="line" data-resize="true" data-height="75" data-width="90%" data-line-width="1" data-line-color="#fff" data-spot-color="#fff" data-fill-color="" data-highlight-line-color="#fff" data-spot-radius="4" data-data="[20,13,7,3,6]"></div>
+                  </div>
+                  <p class="mt" style="color: #000; text-align: center; padding-bottom: 10px;"> Dalam bulan Agustus</p>
+                </div>
+              </div>
+              <!-- /col-md-4 -->
+              
+              <div class="col-md-3 col-sm-2 mb">
+              <!-- service time -->
+                <div class="card-block" style="background-color: #66CDAA; border-radius: 7px;">
+                  <div class="darkblue-header" style="border-radius: 7px;">
+                    <h5 style="text-align: center; padding-top: 10px; color: #000;">Service Time</h5>
+                  </div>
+                  <div class="chart mt">
+                    <div class="sparkline" data-type="pie" data-resize="true" data-height="75" data-width="100%" data-line-width="1" data-line-color="#fff" data-spot-color="#fff" data-fill-color="" data-highlight-line-color="#fff" data-spot-radius="4" data-data="[20,13,7,3,16]" style="margin-left: 90px;"></div>
+                  </div>
+                  <p class="mt" style="color: #000; text-align: center; padding-bottom: 10px;"> Dalam bulan Agustus</p>
+                </div>
+                <!--  /darkblue panel -->
+              </div>
+              <!-- /col-md-4 -->
+
+              <div class="col-md-3 col-sm-2 mb">
+              <!-- response time -->
+                <div class="card-block" style="background-color: #FFB64D; border-radius: 7px;">
+                  <div class="green-header" style="border-radius: 7px;">
+                    <h5 style="text-align: center; padding-top: 10px; color: #000;">Response Time</h5>
+                  </div>
+                  <div class="chart mt">
+                    <div class="sparkline" data-type="line" data-resize="true" data-height="75" data-width="90%" data-line-width="1" data-line-color="#fff" data-spot-color="#fff" data-fill-color="" data-highlight-line-color="#fff" data-spot-radius="4" data-data="[30,13,17,3,6]"></div>
+                  </div>
+                  <p class="mt" style="color: #000; text-align: center; padding-bottom: 10px;"> Dalam bulan Agustus</p>
+                </div>
+              </div>
+              <!-- /col-md-4-->
+               
+              <!-- SERVER STATUS PANELS -->
+              <div class="col-md-3 col-sm-2 mb">
+                <div class="card-block" style="background-color: #ff9966; border-radius: 7px; height: 188px;">
+                  <div class="grey-header" style="background-color: #ff9966; border-radius: 7px;">
+                    <h5 style="color: #000; text-align: center; padding-top: 10px;">Problem</h5>
+                  </div>
+                   <div class="chart mt">
+                    <div class="sparkline" data-type="bullet" data-resize="true" data-height="75" data-width="90%" data-line-width="1" data-line-color="#fff" data-spot-color="#fff" data-fill-color="" data-highlight-line-color="#fff" data-spot-radius="4" data-data="[4,10]"></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-5 col-xs-5 goleft">
+                      <p style="color: #000; margin-left: 10px;">Diselesaikan:</p>
+                    </div>
+                    <div class="col-sm-5 col-xs-5">
+                      <h3 style="color: #000; text-align: center;">4/10</h3>
+                    </div>
+                  </div>
+                </div>
+                <!-- /grey-panel -->
+              </div>
+               <!-- /col-md-4-->
+            </div>
+            <!-- /row -->
+
+        <!-- DATE TIME PICKERS -->
+        <div class="content-panel" style="height: 1600px; border-radius: 5px;">
+         <div class="row mt">
+          <div class="col-lg-8">
+              <form class="form-horizontal style-form" action="#">
+                <h4 style="margin-left: 20px;"><i class="fa fa-angle-right"></i> Pilih Tanggal</h4>
+                 <div class="form-group">
+                  <label class="control-label col-md-3" style="margin-left: 20px; margin-top: 10px;">Date Range</label>
+                   <div class="col-md-6">
+                    <div class="input-group input-large" data-date="01/01/2014" data-date-format="mm/dd/yyyy">
+                      <input type="text" class="form-control dpd1" name="from">
+                        <span class="input-group-addon">To</span>
+                          <input type="text" class="form-control dpd2" name="to">
+                          </div>
+                          <span class="help-block">Select date range</span>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-md-3 control-label" for="inputSuccess" style="margin-left: 20px;">Issue Categories</label>
+                         <div class="col-md-6">
+                          <select class="form-control input-sm mb-md">
+                            <option>-- Pilih Satu --</option>
+                            <option>Permintaan Layanan</option>
+                            <option>Insiden</option>
+                          </select>
+                        </div>
+                      </div>
+               <center><button type="submit" class="btn btn-primary">Filter</button></center>
+              </form>
+            <!-- /form-panel -->
+          </div>
+          <!-- /col-lg-12 -->
+        </div>
+  
+           <!-- ADD CHART -->
+           <div class="graphBox">
+            <div class="box">
+             <h5 style="text-align: center;">Help Topics</h5><canvas id="myChart"></canvas>
+            </div>
+            <div class="box">
+             <h5 style="text-align: center;">Insiden Yang Dapat Diselesaikan</h5><canvas id="earning"></canvas>
+            </div>
+             <div class="box">
+              <h5 style="text-align: center;">Status Insiden Open/Close Ticket</h5><canvas id="diagram"></canvas>
+            </div>
+            <div class="box">
+              <h5 style="text-align: center;">Profile Insiden Berdasarkan Prioritas</h5><canvas id="bagan"></canvas>
+            </div> 
+            <div class="box">
+              <h5 style="text-align: center;">Performance Team</h5><canvas id="diagram1"></canvas>
+            </div>
+          </div>
+             </section>
+            <!--custom chart end-->
+           <!-- row -->
+
+        <div class="row mt">
+          <div class="col-md-12">
+            <div class="content-panel" style="margin-right: 17px; margin-left: 17px; margin-bottom: 40px; border-radius: 5px;">
+              <table class="table table-striped table-advance table-hover">
+                <h4 style="margin-left: 20px;"><i class="fa fa-angle-right"></i> Agent</h4>
+                  <tr>
+                    <th><i class=" fa fa-group"></i> Agent</th>
+                    <th><i class=" fa fa-laptop"></i> Opened</th>
+                    <th><i class=" fa fa-edit"></i> Assigned </th>
+                    <th><i class=" fa fa-calendar"></i> Overdue </th>
+                    <th><i class=" fa fa-cloud-download"></i> Closed</th>
+                    <th><i class=" fa fa-unsorted"></i> Service Time</th>
+                    <th><i class=" fa fa-calendar-o"></i> Response Time</th>
+                  </tr>
+                  </tr>
+                </thead>
+                  <tbody>
+                  <tr>
+                    <td>Andi Megawati Tabrani</td>
+                    <td>6</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>496.3</td>
+                    <td>15.9</td>
+                  </tr>
+                   <tr>
+                     <td>Asih Waris Lestari</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>11.9</td>
+                    <td>6.3</td>
+                  </tr>
+                  <tr>
+                    <td>Asti Fitriyanti</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>11.3</td>
+                    <td>3.4</td>
+                  </tr>
+                  <tr>
+                    <td>Bagas Septian</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1.1</td>
+                    <td>0.3</td>
+                  </tr>
+                   <tr>
+                    <td>Boggi Haryo Anomanda</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>6.0</td>
+                    <td>4.5</td>
+                  </tr>
+                  <tr>
+                    <td>Dendi Irfansyah</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>13.0</td>
+                    <td>5.8</td>
+                  </tr>
+                  <tr>
+                    <td>Faiz Adi Wicaksono</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>16.3</td>
+                    <td>9.3</td>
+                  </tr>
+                   <tr>
+                    <td>Novaldi Rifqi</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0.4</td>
+                    <td>0.6</td>
+                  </tr>
+                  <tr>
+                     <td>Nurholifah</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>10.5</td>
+                    <td>4.4</td>
+                  </tr>
+                  <tr>
+                    <td>Tyasto Ardi Anggoro</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                  </tr>
+                  <tr>
+                    <td>Andias Cahya Untara</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>33.1</td>
+                    <td>25.6</td>
+                  </tr>
+               </tbody>
+              </table>
+            </div>
+            <!-- /content-panel -->
+          </div>
+        </div>
+      </section>
+    <!--main content end-->
+    
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+    <div class="container footer-bottom clearfix">
+      <div class="copyright" style="font-size: 14px; text-align: center; margin-top: 200px; margin-left: 100px;">
+         &copy;Copyright <strong><span>2022 Departemen Sistem Informasi</span></strong> All Rights Reserved.
+      </div>
+    <div class="credits">
+    </div>
+    <!-- <a href="#" class="go-top"><i class="fa fa-angle-up"></i></a> -->
+    </footer>
+    <!-- End Footer -->
+  
+  <!-- js placed at the end of the document so the pages load faster -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script class="include" type="text/javascript" src="lib/jquery.dcjqaccordion.2.7.js"></script>
+  <script src="lib/jquery.scrollTo.min.js"></script>
+  <script src="lib/jquery.nicescroll.js" type="text/javascript"></script>
+  <script src="lib/jquery.sparkline.js"></script>
+  <script src="lib/raphael/raphael.min.js"></script>
+  <script src="lib/morris/morris.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+  <script src="my_chart.js"></script>
+  <script type="text/javascript" language="javascript" src="lib/advanced-datatable/js/jquery.dataTables.js"></script>
+
+  <!--common script for all pages-->
+  <script src="lib/common-scripts.js"></script>
+  <script type="text/javascript" src="lib/gritter/js/jquery.gritter.js"></script>
+  <script type="text/javascript" src="lib/gritter-conf.js"></script>
+  
+  <!--script for this page-->
+ 
+  <script src="lib/jquery-ui-1.9.2.custom.min.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-daterangepicker/date.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-daterangepicker/moment.min.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+  <script src="lib/advanced-form-components.js"></script>
+  <script src="lib/sparkline-chart.js"></script>
+  <script type="text/javascript"></script>
+  <script src="lib/morris-conf.js"></script> 
+  
+</body>
+
+</html>
